@@ -39,7 +39,7 @@
       function callLambdaFunction() {
         try {
             var inputTextValue = document.getElementById("inputText").value;
-            var apigClient = apigClientFactory.newClient();
+            var apigClient = apiGatewayClientFactory.newClient();
             var params = {};
             var body = { inputText: inputTextValue };
             apigClient.capitaliseandreversePost(params, body)
