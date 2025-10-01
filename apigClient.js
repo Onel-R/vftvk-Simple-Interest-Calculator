@@ -83,12 +83,12 @@ apigClientFactory.newClient = function (config) {
     
     
     
-    apigClient.capitaliseAndReversePost = function (params, body, additionalParams) {
+    apigClient.capitaliseandreversePostPost = function (params, body, additionalParams) {
         if(additionalParams === undefined) { additionalParams = {}; }
         
-        apiGateway.core.utils.assertParametersDefined(params, ['body'], ['body']);
+        apiGateway.core.utils.assertParametersDefined(params, [], ['body']);
         
-        var capitaliseAndReversePostRequest = {
+        var capitaliseandreversePostPostRequest = {
             verb: 'post'.toUpperCase(),
             path: pathComponent + uritemplate('/capitaliseandreversePost').expand(apiGateway.core.utils.parseParametersToObject(params, [])),
             headers: apiGateway.core.utils.parseParametersToObject(params, []),
@@ -97,7 +97,7 @@ apigClientFactory.newClient = function (config) {
         };
         
         
-        return apiGatewayClient.makeRequest(capitaliseAndReversePostRequest, authType, additionalParams, config.apiKey);
+        return apiGatewayClient.makeRequest(capitaliseandreversePostPostRequest, authType, additionalParams, config.apiKey);
     };
     
 
