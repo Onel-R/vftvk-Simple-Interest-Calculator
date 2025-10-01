@@ -42,7 +42,7 @@
             var apigClient = apigClientFactory.newClient();
             var params = {};
             var body = { inputText: inputTextValue };
-            apigClient.capitaliseAndReversePost(params, body)
+            apigClient.capitaliseandreversePostPost(params, body)
                 .then(function (result) {
                     document.getElementById("outputText").value = JSON.parse(result.data.output).inputText;
                 })
