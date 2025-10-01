@@ -90,7 +90,7 @@ apigClientFactory.newClient = function (config) {
         
         var capitaliseAndReversePostRequest = {
             verb: 'post'.toUpperCase(),
-            path: pathComponent + uritemplate('/capitaliseAndReverse').expand(apiGateway.core.utils.parseParametersToObject(params, [])),
+            path: pathComponent + uritemplate('/capitaliseandreversePost').expand(apiGateway.core.utils.parseParametersToObject(params, [])),
             headers: apiGateway.core.utils.parseParametersToObject(params, []),
             queryParams: apiGateway.core.utils.parseParametersToObject(params, []),
             body: body
