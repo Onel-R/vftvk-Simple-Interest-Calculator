@@ -44,7 +44,7 @@
             var body = { inputText: inputTextValue };
             apigClient.capitaliseandreversePostPost(params, body)
                 .then(function (result) {
-                    document.getElementById("inputText").value = JSON.parse(result.details.output);
+                    document.getElementById("inputText").value = JSON.parse(result.details);
                     document.getElementById("outputText").value = JSON.parse(result.details.output).inputText;
                 })
                 .catch(function (result) {
